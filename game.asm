@@ -27,7 +27,7 @@
 # N. Start menu [1 mark]
 #
 # Link to video demonstration for final submission:
-# - https://play.library.utoronto.ca/watch/eb222c0a709c086a3e47694ca87005fa
+# - https://play.library.utoronto.ca/watch/40313dd3cba48b2517b9bde6fbe9c4ba
 #
 # Are you OK with us sharing the video with people outside course staff?
 # - yes, and please share this project github link as well!
@@ -439,7 +439,7 @@ main_platform_collision_loop:
 	bge $s0, PF_C, main_platform_collision_END
 	lw $a0, 0($s1)
 	lw $a1, 0($s2)
-	li $a2, PF_H
+	li $a2, 1 # only the top of the cloud has collision body
 	li $a3, PF_W
 	jal check_collision
 	# if there is no collision, then continue
